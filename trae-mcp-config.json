@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "oracle-mcp-server": {
+      "command": "node",
+      "args": ["e:\\working_directory\\mpcserver\\orcldb\\oracle-mcp-server.js"],
+      "cwd": "e:\\working_directory\\mpcserver\\orcldb",
+      "env": {
+        "ORACLE_USER": "CBLNG300625",
+        "ORACLE_PASSWORD": "c",
+        "ORACLE_CONNECT_STRING": "192.168.1.163:1521/CTBLDB",
+        "MCP_SERVER_NAME": "oracle-mcp-server",
+        "MCP_SERVER_VERSION": "1.0.0"
+      }
+    }
+  }
+}

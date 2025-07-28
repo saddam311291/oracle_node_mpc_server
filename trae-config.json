@@ -1,0 +1,77 @@
+{
+  "name": "Oracle Database MCP Server",
+  "description": "MCP server for Oracle database operations with query execution, DML operations, and schema inspection capabilities",
+  "type": "mcp",
+  "config": {
+    "command": "node",
+    "args": ["oracle-mcp-server.js"],
+    "cwd": "e:\\working_directory\\mpcserver\\orcldb",
+    "env": {
+      "ORACLE_USER": "CBLNG300625",
+      "ORACLE_PASSWORD": "c",
+      "ORACLE_CONNECT_STRING": "192.168.1.163:1521/CTBLDB",
+      "MCP_SERVER_NAME": "oracle-mcp-server",
+      "MCP_SERVER_VERSION": "1.0.0"
+    }
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "execute_query",
+        "description": "Execute SELECT queries on Oracle database",
+        "category": "database"
+      },
+      {
+        "name": "execute_dml",
+        "description": "Execute INSERT, UPDATE, DELETE operations",
+        "category": "database"
+      },
+      {
+        "name": "describe_table",
+        "description": "Get table structure and schema information",
+        "category": "database"
+      },
+      {
+        "name": "list_tables",
+        "description": "List all accessible tables",
+        "category": "database"
+      },
+      {
+        "name": "get_connection_info",
+        "description": "Get database connection information",
+        "category": "database"
+      }
+    ]
+  },
+  "installation": {
+    "requirements": [
+      "Node.js 18+",
+      "Oracle Instant Client",
+      "Access to Oracle Database"
+    ],
+    "setup_commands": [
+      "npm install"
+    ]
+  },
+  "usage_examples": [
+    {
+      "title": "Query user information",
+      "tool": "execute_query",
+      "example": {
+        "query": "SELECT USER, SYSDATE FROM DUAL"
+      }
+    },
+    {
+      "title": "List all tables",
+      "tool": "list_tables",
+      "example": {}
+    },
+    {
+      "title": "Describe a table",
+      "tool": "describe_table",
+      "example": {
+        "table_name": "EMPLOYEES"
+      }
+    }
+  ]
+}

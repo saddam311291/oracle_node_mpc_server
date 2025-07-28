@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "oracle-mcp-server": {
+      "command": "node",
+      "args": ["oracle-mcp-server.js"],
+      "env": {
+        "ORACLE_USER": "CBLNG300625",
+        "ORACLE_PASSWORD": "c",
+        "ORACLE_CONNECT_STRING": "192.168.1.163:1521/CTBLDB"
+      }
+    }
+  }
+}
